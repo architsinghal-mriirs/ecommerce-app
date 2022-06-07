@@ -34,5 +34,9 @@ app.listen(configs.PORT, async()=>{
   
   // await db.sequelize.sync({ force: true });
 
+  if(process.env.SYNC) {
+    await db.sequelize.sync({ force: true });
+}
+
 })
 
