@@ -23,9 +23,8 @@ productRoutes(app);
 userRoutes(app);
 cartRoutes(app);
 
-app.get('/home', async function (req, res) {
-    const getCategory = await Categories.findAll({ include: Products });
-    res.json(getCategory);
+app.get('/', async function (req, res) {
+    res.send("Welcome to My App");
 })
 
 
