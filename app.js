@@ -24,12 +24,12 @@ userRoutes(app);
 cartRoutes(app);
 
 app.get('/', async function (req, res) {
-    res.send("Welcome to My App");
+    res.send("Welcome to My Ecommerce App");
 })
 
 
-app.listen(configs.PORT, async()=>{
-    console.log("Server start on port " + configs.PORT);
+app.listen(process.env.PORT, async()=>{
+    console.log("Server start on port " , process.env.PORT);
   
   // await db.sequelize.sync({ force: true });
 
